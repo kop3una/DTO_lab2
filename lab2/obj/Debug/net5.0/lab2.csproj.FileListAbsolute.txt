@@ -1,0 +1,42 @@
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.csprojAssemblyReference.cache
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.AssemblyInfoInputs.cache
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.AssemblyInfo.cs
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.csproj.CoreCompileInputs.cache
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.exe
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.deps.json
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.runtimeconfig.json
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.runtimeconfig.dev.json
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\ref\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\lab2.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\ref\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.genruntimeconfig.cache
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\Faker.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\Ganaraters.dll
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\Faker.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\bin\Debug\net5.0\Ganaraters.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\lab2\obj\Debug\net5.0\lab2.csproj.CopyComplete
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.exe
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.deps.json
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.runtimeconfig.json
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.runtimeconfig.dev.json
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\ref\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\lab2.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\Faker.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\Ganaraters.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\Faker.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\bin\Debug\net5.0\Ganaraters.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.csprojAssemblyReference.cache
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.AssemblyInfoInputs.cache
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.AssemblyInfo.cs
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.csproj.CoreCompileInputs.cache
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.csproj.CopyComplete
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\ref\lab2.dll
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.pdb
+C:\Users\kiril\OneDrive\Рабочий стол\lab2\lab2\obj\Debug\net5.0\lab2.genruntimeconfig.cache
