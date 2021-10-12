@@ -48,7 +48,12 @@ namespace MyFaker
 
         public T Create<T>()
         {
-            return (T)Create(typeof(T));
+            try
+            {
+                return (T)Create(typeof(T));
+            } catch(InvalidCastException) {
+                return (T)Activator.CreateInstance(typeof(T));
+            }
         }
 
         private object Create(Type type)
@@ -56,9 +61,17 @@ namespace MyFaker
             if (type.IsPrimitive || type.Equals(typeof(string)) )
             {
                 IGenerate generator = PrimitiveGeneratorFactory.GetInstance().GetGenerator(type);
-                return generator.GetValue();
+                if (generator != null)
+                {
+                    return generator.GetValue();
+                }
+                else
+                {
+                    return new object();
+                }
+                
             }
-            return null;
+            return new object();
         }
     }
 }

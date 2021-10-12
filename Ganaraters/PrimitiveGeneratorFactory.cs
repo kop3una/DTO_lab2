@@ -23,7 +23,13 @@ namespace Ganaraters
 
         public IGenerate GetGenerator(Type type)
         {
-            return generators[type];
+            try
+            {
+                return generators[type];
+            } catch (KeyNotFoundException e){
+                return null;
+            }
+            
         }
 
         public void Add(Type type, IGenerate generator)

@@ -15,6 +15,10 @@ namespace Tests
             System.Console.WriteLine(intTest);
             byte byteTest = faker.Create<byte>();
             System.Console.WriteLine(byteTest);
+            sbyte sbyteTest = faker.Create<sbyte>();
+            System.Console.WriteLine(sbyteTest);
+
+
             char charTest = faker.Create<char>();
             System.Console.WriteLine(charTest);
             string stringTest = faker.Create<string>();
