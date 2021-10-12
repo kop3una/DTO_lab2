@@ -9,6 +9,8 @@ namespace Ganaraters.PrimitiveTypeGenerator
     class ByteGenerator : IGenerate
     {
         private Random random = new Random();
+        public Type GeneratedType => typeof(byte);
+
         public object GetValue()
         {
             int numberSign = random.Next(0, 1);

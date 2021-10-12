@@ -8,6 +8,7 @@ namespace Ganaraters
 {
     public interface IGenerate
     {
+        Type GeneratedType { get; }
         object GetValue();
     }
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Ganaraters.PrimitiveTypeGenerator
 {
     class IntGenerator : IGenerate
     {
         private Random random = new Random();
+
+        public Type GeneratedType => typeof(int);
+
         public object GetValue()
         {
             int numberSign = random.Next(0, 1);

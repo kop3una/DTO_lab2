@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Plugins/1.0.0": {
+        "dependencies": {
+          "Ganaraters": "1.0.0"
+        },
+        "runtime": {
+          "Plugins.dll": {}
+        }
+      },
+      "Ganaraters/1.0.0": {
+        "runtime": {
+          "Ganaraters.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Plugins/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ganaraters/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

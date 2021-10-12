@@ -1,13 +1,18 @@
 ﻿using Ganaraters.PrimitiveTypeGenerator;
 using System;
+using System.Collections.Generic;
 
 namespace Ganaraters
 {
     public class PrimitiveGeneratorFactory
     {
         private static readonly PrimitiveGeneratorFactory instance = new PrimitiveGeneratorFactory();
-        private readonly IGenerate IntGenerator = new IntGenerator();
-        private readonly IGenerate ByteGenerator = new ByteGenerator();
+        private Dictionary<Type, IGenerate> generators = new Dictionary<Type, IGenerate>
+        {
+            {typeof(int), new IntGenerator()},
+            {typeof(byte), new ByteGenerator()},
+        };
+
         private PrimitiveGeneratorFactory()
         {
         }
@@ -18,12 +23,12 @@ namespace Ganaraters
 
         public IGenerate GetGenerator(Type type)
         {
-            switch (type.Name)
-            {
-                case "Int32": return IntGenerator;
-                case "Byte": return ByteGenerator;
-            }
-            return null;
+            return generators[type];
+        }
+
+        public void Add(Type type, IGenerate generator)
+        {
+            generators.Add(type, generator);
         }
 
     }

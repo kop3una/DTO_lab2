@@ -2,7 +2,6 @@ C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\bin\Debug\net5.0\Ganaraters.dll
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\bin\Debug\net5.0\ref\Ganaraters.dll
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\bin\Debug\net5.0\Ganaraters.pdb
-C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\obj\Debug\net5.0\Ganaraters.csprojAssemblyReference.cache
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\obj\Debug\net5.0\Ganaraters.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\obj\Debug\net5.0\Ganaraters.AssemblyInfoInputs.cache
 C:\Users\kiril\OneDrive\Рабочий стол\Учеба\3 курс\СПП\lab2\Ganaraters\obj\Debug\net5.0\Ganaraters.AssemblyInfo.cs
