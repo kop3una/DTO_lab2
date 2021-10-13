@@ -9,6 +9,7 @@ namespace MyFaker
     public class Faker : IFaker
     {
         private string path = "C:\\Users\\kiril\\OneDrive\\Рабочий стол\\Учеба\\3 курс\\СПП\\lab2\\pluginsInLab";
+        public Stack<Type> generatedTypes = new Stack<Type>();
 
         public Faker()
         {
@@ -51,27 +52,167 @@ namespace MyFaker
             try
             {
                 return (T)Create(typeof(T));
-            } catch(InvalidCastException) {
+            } catch (InvalidCastException) {
+                try
+                {
+                    return (T)Activator.CreateInstance(typeof(T));
+
+                }
+                catch (MissingMethodException)
+                {
+                    return default(T);
+                }
+               
+            } catch (NullReferenceException)
+            {
                 return (T)Activator.CreateInstance(typeof(T));
             }
         }
 
         private object Create(Type type)
         {
-            if (type.IsPrimitive || type.Equals(typeof(string)) )
+
+            if (type.IsClass && !type.IsPrimitive && !type.IsPointer && !type.Equals(typeof(string)) && !type.Equals(typeof(DateTime)) &&
+                !type.IsGenericType && !type.IsArray && !generatedTypes.Contains(type))
             {
-                IGenerate generator = PrimitiveGeneratorFactory.GetInstance().GetGenerator(type);
-                if (generator != null)
+                int maxConstructorFieldsCount = 0, curConstructorFieldsCount;
+                ConstructorInfo constructorToUse = null;
+
+                foreach (ConstructorInfo constructor in type.GetConstructors())
                 {
-                    return generator.GetValue();
+                    curConstructorFieldsCount = constructor.GetParameters().Length;
+                    if (curConstructorFieldsCount > maxConstructorFieldsCount)
+                    {
+                        maxConstructorFieldsCount = curConstructorFieldsCount;
+                        constructorToUse = constructor;
+                    }
+                }
+
+                generatedTypes.Push(type);
+                if (constructorToUse == null)
+                {
+                    return CreateByProperties(type);
                 }
                 else
                 {
-                    return new object();
+                    return CreateByConstructor(type, constructorToUse);
                 }
-                
+               // generatedTypes.Pop();
+            //else if (type.IsValueType)
+            //{
+            //    generated = Activator.CreateInstance(type);
+            //}
+            //else
+            //{
+            //    generated = null;
+            //}
+        
+           // return generated;
+        } else
+            {
+                if (type.IsPrimitive || type.Equals(typeof(string)) || type.Equals(typeof(DateTime)))
+                {
+                    IGenerate generator = PrimitiveGeneratorFactory.GetInstance().GetGenerator(type);
+                    if (generator != null)
+                    {
+                        return generator.GetValue();
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+                }
+                else if (type.IsGenericType || type.IsArray)
+                {
+                    IGenerateGeneric generator = GenericGeneratorFactory.GetInstance().GetGenerator(type);
+                    if (generator != null)
+                    {
+                        if (!type.IsArray)
+                        {
+                            return generator.GetValue(type.GenericTypeArguments[0]);
+                        }
+                        else
+                        {
+                            return generator.GetValue(type.GetElementType());
+                        }
+
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
             }
-            return new object();
+            
+            return null;
+        }
+
+        //protected bool TryCreateByCustomGenerator(ParameterInfo parameterInfo, Type type, out object generated)
+        //{
+        //    foreach (KeyValuePair<PropertyInfo, IBaseTypeGenerator> keyValue in customGenerators)
+        //    {
+        //        if ((keyValue.Key.Name.ToLower() == parameterInfo.Name.ToLower()) && keyValue.Value.GeneratedType.Equals(parameterInfo.ParameterType)
+        //            && keyValue.Key.ReflectedType.Equals(type))
+        //        {
+        //            generated = keyValue.Value.Generate();
+        //            return true;
+        //        }
+        //    }
+        //    generated = default(object);
+        //    return false;
+        //}
+
+        protected object CreateByProperties(Type type)
+        {
+            try
+            {
+                object generated = Activator.CreateInstance(type);
+
+                foreach (FieldInfo fieldInfo in type.GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public))
+                {
+                    fieldInfo.SetValue(generated, this.Create(fieldInfo.FieldType));
+                }
+
+                foreach (PropertyInfo propertyInfo in type.GetProperties(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public))
+                {
+                    if (propertyInfo.CanWrite)
+                    {
+                        try
+                        {
+                            propertyInfo.SetValue(generated, this.Create(propertyInfo.PropertyType));
+                        } catch
+                        {
+                            return null;
+                        }
+                        
+                    }
+                }
+                return generated;
+            } catch (MissingMethodException)
+            {
+                return null;
+            }
+            
+        }
+
+        protected object CreateByConstructor(Type type, ConstructorInfo constructor)
+        {
+            var parametersValues = new List<object>();
+
+            foreach (ParameterInfo parameterInfo in constructor.GetParameters())
+            {
+                parametersValues.Add(this.Create(parameterInfo.ParameterType));
+            }
+
+            try
+            {
+                return constructor.Invoke(parametersValues.ToArray());
+            }
+            catch (TargetInvocationException)
+            {
+                return null;
+            }
         }
     }
 }
